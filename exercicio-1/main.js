@@ -8,11 +8,11 @@ function randomValueFromArray(array) {
 }
 
 
-const storyText = `It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.`
+const storyText = `Hoje está um belo dia para uma massa, então que tal um :insertx:?. Vá comprar os ingredientes para um bom :inserty:, e como proteina... que tal :insertz:?. No fim do preparo, você Bob, terá um bom :insertx: para aproveitar.`
 
-const insertx = ["Willy the Goblin", "Big Daddy", "Father Christmas"]
-const inserty = ["the soup kitchen", "Disneyland", "the White House"]
-const insertz = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"]
+const insertx = ["Espaguete", "Penne", "Macarrão Parafuso"]
+const inserty = ["Molho de tomate", "Molho branco", "Alho e óleo"]
+const insertz = ["Carne", "Frango", "Bacon"]
 
 randomize.addEventListener('click', result);
 
@@ -32,11 +32,14 @@ function result() {
         newStory = newStory.replace("Bob", name);
     }
 
-    if (document.getElementById("uk").checked) {
-        const weight = Math.round(300 * 0.0714286) + ' stone';
-        const temperature = Math.round((94-32) * 5/9) + ' centigrade';
-        newStory = newStory.replace('94 fahrenheit', temperature);
-        newStory = newStory.replace('300 pound', temperature);
+    if (document.getElementById("ita").checked) {
+        // const weight = Math.round(300 * 0.0714286) + ' stone';
+        // const temperature = Math.round((94-32) * 5/9) + ' centigrade';
+        // newStory = newStory.replace('94 fahrenheit', temperature);
+        // newStory = newStory.replace('300 pound', temperature);
+
+        newStory = newStory.replace("Espaguete", "Spaguetti");
+        newStory = newStory.replace("Parafuso", "Maccheroni alle viti");
 
     }
 
